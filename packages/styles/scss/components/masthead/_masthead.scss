@@ -206,13 +206,30 @@ $search-transition-timing: 95ms;
     flex: 0;
   }
 
-  .#{$prefix}--header__nav-container {
+  //.#{$prefix}--header__nav-container {
+  //  height: 100%;
+  //  overflow-x: hidden;
+  //  @include carbon--breakpoint(md) {
+  //    display: flex;
+  //    flex: 1;
+  //  }
+  //}
+
+  .container {
+    scroll-behavior: smooth;
+    width: 100%;
     height: 100%;
     overflow-x: hidden;
-    @include carbon--breakpoint(md) {
-      display: flex;
-      flex: 1;
-    }
+    outline: solid cyan 2px;
+    outline-offset: -2px;
+  }
+
+  .content {
+    width: 800px;
+    height: 100%;
+    outline: solid green 2px;
+    outline-offset: -2px;
+    position: relative;
   }
 
   .#{$prefix}--header__nav {
@@ -305,6 +322,23 @@ $search-transition-timing: 95ms;
         box-shadow: none;
       }
     }
+  }
+
+  .sub-content-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    //clip: rect(0, 0, 0, 0);
+  }
+  .sub-content-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    //clip: rect(0, 0, 0, 0);
   }
 
   .#{$prefix}--header__nav-caret-left,
